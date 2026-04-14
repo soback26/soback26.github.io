@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Diwen Tang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title"><a href="index.html">Diwen Tang</a></div>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Bio</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="page">
+<main class="container">
+
+  <div class="research-section">
+    <p class="section-heading">Open Source</p>
+
+    <div class="project-item">
+      <h3><a href="https://github.com/soback26/lifesci-methodology" target="_blank">lifesci-methodology</a></h3>
+      <p class="project-desc">Personal methodology library for life sciences investing. Skills, frameworks, and reference data for biopharma drug valuation, equity research, and pre-IPO pipeline tracking.</p>
+      <p class="project-details">A consolidated repository of analytical frameworks, reusable Claude Code skills, and curated reference data accumulated across drug models and equity coverage. Includes 7 Claude Code skills (drug model, clinical landscape, A1 pipeline update, BD tracker, Howard Marks investment framework, and more), 4 methodology references (bottom-up 6-step revenue model, SOTP DCF cheat-sheet, Howard Marks philosophy, royalty monetization waterfall), and curated datasets covering 80+ indications with epidemiology, pricing, and market share parameters. Designed to be auto-discoverable by Claude Code via symlinks.</p>
+    </div>
+
+    <div class="project-item">
+      <h3><a href="https://github.com/soback26/biotech-bd-tracker" target="_blank">biotech-bd-tracker</a></h3>
+      <p class="project-desc">Cross-border out-licensing deal tracker for Greater China, Japan, and Korea biotech. A sourcing engine for structured capital opportunities.</p>
+      <p class="project-details">Systematic tracker of ~175 biopharma out-licensing transactions (2020–2026) across GC/JP/KR licensors, organized into Actionable (35 deals at Ph2/3+ ex-China) and Pipeline (140 deals at earlier stages) sheets. 15-column schema captures licensor, licensee, asset/target/MoA, modality, development stage by region (US/CN/EU/JP), deal value, rights structure, and analyst notes. Modality coverage spans small molecules, ADCs, monoclonal antibodies, siRNA, peptides, cell therapy, and fusion proteins.</p>
+    </div>
+  </div>
+
+</main>
+</div>
+
+</body>
+</html>
