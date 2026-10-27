@@ -316,8 +316,8 @@
     el('text', { x: x(9) - 8, y: y(risked[9]) - 10, 'text-anchor': 'end', 'class': 'dlabel' }, 'risk-adjusted');
     // hover layer
     var xh = el('line', { x1: 0, x2: 0, y1: T, y2: y(0), 'class': 'xh' });
-    var p1 = el('circle', { r: 4, fill: '#1f9d5a', stroke: '#fff', 'stroke-width': 2, 'class': 'pt' });
-    var p2 = el('circle', { r: 4, fill: '#4e6fae', stroke: '#fff', 'stroke-width': 2, 'class': 'pt' });
+    var p1 = el('circle', { r: 4, fill: '#2d4f9e', stroke: '#fff', 'stroke-width': 2, 'class': 'pt' });
+    var p2 = el('circle', { r: 4, fill: '#a86b1c', stroke: '#fff', 'stroke-width': 2, 'class': 'pt' });
     var hit = el('rect', { x: L, y: T, width: W - L - R, height: H - T - B, fill: 'transparent' });
     function move(evt) {
       var rect = svg.getBoundingClientRect();

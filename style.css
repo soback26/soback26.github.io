@@ -9,12 +9,12 @@
   --rule-2: #ebecef;
   --paper: #ffffff;
   --paper-2: #f7f7f5;
-  --mint: #1f9d5a;
-  --mint-2: #2fb36b;
-  --mint-tint: #e6f7ec;
-  --mint-pill: #cff5dd;
-  --slate: #4e6fae;
-  --amber: #b7791f;
+  --accent: #2d4f9e;
+  --accent-2: #4a6bc9;
+  --accent-tint: #eef1f9;
+  --accent-pill: #dce3f5;
+  --bronze: #a86b1c;
+  --plum: #7a4f8c;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   --max: 1200px;
@@ -40,7 +40,7 @@ body {
   line-height: 1.6;
 }
 
-::selection { background: var(--mint-pill); color: var(--ink); }
+::selection { background: var(--accent-pill); color: var(--ink); }
 
 a { color: var(--ink); text-decoration: none; }
 a:hover { opacity: 1; }
@@ -54,7 +54,7 @@ a:hover { opacity: 1; }
   color: var(--mute);
   margin-bottom: 14px;
 }
-.lede { font-size: 1.25rem; line-height: 1.5; font-weight: 300; color: var(--ink); }
+.lede { font-size: 1.5rem; line-height: 1.35; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); }
 .arrow-links { display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
 .arrow-links a {
   display: flex; justify-content: space-between; align-items: center;
@@ -160,7 +160,7 @@ header {
   gap: 64px;
   align-items: start;
 }
-.bio-text p { font-size: 1rem; line-height: 1.65; color: var(--ink-2); }
+.bio-text p { font-size: 1.05rem; line-height: 1.65; color: var(--ink-2); }
 .bio-text p + p { margin-top: 18px; }
 .bio-text p.lede { color: var(--ink); }
 .bio-links { margin-top: 36px; max-width: 420px; }
@@ -171,8 +171,8 @@ header {
 
 /* ── Projects (catalogue) ── */
 .section-heading {
-  font-weight: 300;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
   color: var(--ink);
