@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>/drug-model — Diwen Tang</title>
+<meta name="description" content="/drug-model is an AI research system for drug and biotech investing: name a drug or a company, ask the question, and get an evidence-graded forecast, valuation or competitive landscape with every number traceable to a primary document.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="drug-model.css">
+</head>
+<body class="dm">
+
+<header>
+  <div class="header-inner">
+    <div class="site-title"><a href="index.html">Diwen Tang</a></div>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Bio</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="subnav" aria-label="Page sections">
+  <div class="subnav-inner">
+    <span class="subnav-brand">/drug-model</span>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#deliverables">Deliverables</a></li>
+      <li><a href="#path">Path</a></li>
+      <li><a href="#equation">Equation</a></li>
+      <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#controls">Controls</a></li>
+      <li><a href="#foundation">Foundation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="dm-main">
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<section id="overview" class="hero wrap">
+  <div class="hero-grid">
+    <div class="hero-title">
+      <p class="eyebrow">Proprietary stack · Research system</p>
+      <h1>/drug-model</h1>
+    </div>
+    <div class="hero-copy">
+      <p class="lede">An AI research system for drug and biotech investing. Name a drug or a company, ask the question — it returns an evidence-graded forecast, valuation or competitive landscape, with every number traceable to a primary document.</p>
+      <div class="arrow-links">
+        <a href="#path">See how a run works <span>→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <figure class="blueprint-wrap" aria-labelledby="bp-caption">
+    <div class="blueprint-scroll">
+    <svg class="blueprint" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blueprint of the system: evidence from primary documents, industry databases and a proprietary library flows into one method, passes three controls and leaves as one of seven deliverables.">
+      <defs>
+        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#c9ccd2" stroke-width="1"/>
+        </pattern>
+        <marker id="chev" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M1,1 L7,4 L1,7" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </marker>
+      </defs>
+
+      <!-- frame -->
+      <rect x="0.5" y="0.5" width="1199" height="559" fill="#fff" stroke="#1e2124"/>
+      <!-- left strip -->
+      <line x1="36.5" y1="0" x2="36.5" y2="560" stroke="#1e2124"/>
+      <rect x="10" y="10" width="16" height="16" fill="#1e2124"/>
+      <text x="18" y="22" class="bp-mark" text-anchor="middle">D</text>
+      <text class="bp-strip" transform="rotate(-90 22 540)" x="22" y="540">/drug-model → every number traceable to a primary document</text>
+
+      <!-- ===== EVIDENCE ===== -->
+      <text x="80" y="48" class="bp-cap">Evidence</text>
+
+      <!-- platform 1: primary documents -->
+      <g class="bp-group" data-hl="l-e1" transform="translate(240,0)">
+        <text x="0" y="88" class="bp-label" text-anchor="middle">PRIMARY DOCUMENTS</text>
+        <polygon points="-120,172 56,172 56,184 -120,184" fill="url(#hatch)" stroke="#1e2124"/>
+        <polygon points="56,172 120,128 120,140 56,184" fill="#e9e9e6" stroke="#1e2124"/>
+        <polygon points="-120,172 -56,128 120,128 56,172" fill="#fafaf8" stroke="#1e2124"/>
+        <!-- documents -->
+        <g class="bp-item">
+          <rect x="-78" y="106" width="36" height="48" fill="#fff" stroke="#1e2124"/>
+          <line x1="-70" y1="118" x2="-50" y2="118" stroke="#1e2124"/><line x1="-70" y1="126" x2="-50" y2="126" stroke="#1e2124"/><line x1="-70" y1="134" x2="-56" y2="134" stroke="#1e2124"/>
+          <rect x="-30" y="98" width="36" height="48" fill="#fff" stroke="#1e2124"/>
+          <line x1="-22" y1="110" x2="-2" y2="110" stroke="#1e2124"/><line x1="-22" y1="118" x2="-2" y2="118" stroke="#1e2124"/><line x1="-22" y1="126" x2="-8" y2="126" stroke="#1e2124"/>
+          <rect x="18" y="106" width="36" height="48" fill="#fff" stroke="#1e2124"/>
+          <line x1="26" y1="118" x2="46" y2="118" stroke="#1e2124"/><line x1="26" y1="126" x2="46" y2="126" stroke="#1e2124"/><rect x="26" y="134" width="20" height="10" fill="#cff5dd" stroke="none"/>
+        </g>
+        <text x="0" y="206" class="bp-sub" text-anchor="middle">labels · registries · filings</text>
+      </g>
+
+      <!-- platform 2: industry databases -->
+      <g class="bp-group" data-hl="l-e2" transform="translate(490,0)">
+        <text x="0" y="88" class="bp-label" text-anchor="middle">INDUSTRY DATABASES</text>
+        <polygon points="-120,172 56,172 56,184 -120,184" fill="url(#hatch)" stroke="#1e2124"/>
+        <polygon points="56,172 120,128 120,140 56,184" fill="#e9e9e6" stroke="#1e2124"/>
+        <polygon points="-120,172 -56,128 120,128 56,172" fill="#fafaf8" stroke="#1e2124"/>
+        <g class="bp-item">
+          <!-- cylinder -->
+          <path d="M-70,112 a24,8 0 0 1 48,0 v34 a24,8 0 0 1 -48,0 z" fill="#fff" stroke="#1e2124"/>
+          <ellipse cx="-46" cy="112" rx="24" ry="8" fill="#fff" stroke="#1e2124"/>
+          <path d="M-70,124 a24,8 0 0 0 48,0" fill="none" stroke="#1e2124"/>
+          <path d="M-70,136 a24,8 0 0 0 48,0" fill="none" stroke="#1e2124"/>
+          <!-- table -->
+          <rect x="0" y="108" width="56" height="42" fill="#fff" stroke="#1e2124"/>
+          <line x1="0" y1="120" x2="56" y2="120" stroke="#1e2124"/><line x1="0" y1="132" x2="56" y2="132" stroke="#1e2124"/>
+          <line x1="18" y1="108" x2="18" y2="150" stroke="#1e2124"/><line x1="36" y1="108" x2="36" y2="150" stroke="#1e2124"/>
+          <rect x="1" y="109" width="54" height="10" fill="#cff5dd" stroke="none"/>
+        </g>
+        <text x="0" y="206" class="bp-sub" text-anchor="middle">pipeline · pricing · epidemiology</text>
+      </g>
+
+      <!-- platform 3: proprietary library -->
+      <g class="bp-group" data-hl="l-e3" transform="translate(740,0)">
+        <text x="0" y="88" class="bp-label" text-anchor="middle">PROPRIETARY LIBRARY</text>
+        <polygon points="-120,172 56,172 56,184 -120,184" fill="url(#hatch)" stroke="#1e2124"/>
+        <polygon points="56,172 120,128 120,140 56,184" fill="#e9e9e6" stroke="#1e2124"/>
+        <polygon points="-120,172 -56,128 120,128 56,172" fill="#fafaf8" stroke="#1e2124"/>
+        <g class="bp-item">
+          <!-- stacked sheets -->
+          <rect x="-82" y="118" width="48" height="34" fill="#fff" stroke="#1e2124"/>
+          <rect x="-76" y="112" width="48" height="34" fill="#fff" stroke="#1e2124"/>
+          <rect x="-70" y="106" width="48" height="34" fill="#fff" stroke="#1e2124"/>
+          <line x1="-62" y1="116" x2="-30" y2="116" stroke="#1e2124"/><line x1="-62" y1="124" x2="-30" y2="124" stroke="#1e2124"/><line x1="-62" y1="132" x2="-40" y2="132" stroke="#1e2124"/>
+          <!-- launch curves -->
+          <rect x="0" y="104" width="60" height="48" fill="#fff" stroke="#1e2124"/>
+          <path d="M6,146 C18,146 22,118 34,116 C44,115 48,126 54,128" fill="none" stroke="#1f9d5a" stroke-width="1.5"/>
+          <path d="M6,146 C20,146 24,132 36,130 C46,129 50,136 54,138" fill="none" stroke="#1e2124" stroke-width="1"/>
+          <line x1="6" y1="146" x2="54" y2="146" stroke="#1e2124"/>
+        </g>
+        <text x="0" y="206" class="bp-sub" text-anchor="middle">models · anchors · launches</text>
+      </g>
+
+      <!-- connectors evidence -> method -->
+      <path id="l-e1" class="bp-flow" d="M240,214 C240,244 300,238 300,266" marker-end="url(#chev)"/>
+      <path id="l-e2" class="bp-flow" d="M490,214 C490,240 490,240 490,266" marker-end="url(#chev)"/>
+      <path id="l-e3" class="bp-flow" d="M740,214 C740,244 680,238 680,266" marker-end="url(#chev)"/>
+
+      <!-- ===== METHOD ===== -->
+      <g class="bp-group" data-hl="l-e1 l-e2 l-e3 l-c">
+        <text x="140" y="254" class="bp-cap">Method</text>
+        <rect x="140.5" y="268.5" width="700" height="104" fill="#e6f7ec" stroke="#1f9d5a"/>
+        <g class="bp-pills">
+          <rect x="168" y="303" width="96" height="34" fill="#fff" stroke="#1f9d5a"/><text x="216" y="325" text-anchor="middle">Patients</text>
+          <text x="275" y="326" class="bp-op" text-anchor="middle">×</text>
+          <rect x="288" y="303" width="74" height="34" fill="#fff" stroke="#1f9d5a"/><text x="325" y="325" text-anchor="middle">Share</text>
+          <text x="373" y="326" class="bp-op" text-anchor="middle">×</text>
+          <rect x="386" y="303" width="94" height="34" fill="#fff" stroke="#1f9d5a"/><text x="433" y="325" text-anchor="middle">Duration</text>
+          <text x="491" y="326" class="bp-op" text-anchor="middle">×</text>
+          <rect x="504" y="303" width="96" height="34" fill="#fff" stroke="#1f9d5a"/><text x="552" y="325" text-anchor="middle">Net price</text>
+          <text x="611" y="326" class="bp-op" text-anchor="middle">×</text>
+          <rect x="624" y="303" width="58" height="34" fill="#fff" stroke="#1f9d5a"/><text x="653" y="325" text-anchor="middle">PoS</text>
+          <text x="694" y="326" class="bp-op" text-anchor="middle">=</text>
+          <rect x="708" y="303" width="112" height="34" fill="#1e2124" stroke="#1e2124"/><text x="764" y="325" text-anchor="middle" class="bp-white">Sales</text>
+        </g>
+        <text x="490" y="358" class="bp-sub" text-anchor="middle">by indication × region, over time · one line per indication and market, then summed</text>
+        <text x="490" y="290" class="bp-sub" text-anchor="middle">identity locked first · one path, end to end</text>
+      </g>
+
+      <!-- connector method -> controls -->
+      <path id="l-c" class="bp-flow" d="M248,374 L248,428" marker-end="url(#chev)"/>
+
+      <!-- ===== CONTROLS ===== -->
+      <g class="bp-group" data-hl="l-c l-o">
+        <text x="140" y="418" class="bp-cap">Controls</text>
+        <g class="bp-gate">
+          <rect x="140.5" y="430.5" width="216" height="84" fill="#fff" stroke="#1e2124"/>
+          <text x="156" y="452" class="bp-gate-t">1  MACHINE CHECK</text>
+          <text x="156" y="470" class="bp-sub">refuses a silent assumption,</text>
+          <text x="156" y="484" class="bp-sub">unreconciled arithmetic,</text>
+          <text x="156" y="498" class="bp-sub">a source that cannot be opened</text>
+        </g>
+        <line x1="356" y1="472" x2="374" y2="472" stroke="#1e2124" marker-end="url(#chev)"/>
+        <g class="bp-gate">
+          <rect x="376.5" y="430.5" width="216" height="84" fill="#fff" stroke="#1e2124"/>
+          <text x="392" y="452" class="bp-gate-t">2  INDEPENDENT REVIEW</text>
+          <text x="392" y="470" class="bp-sub">a second reader re-opens</text>
+          <text x="392" y="484" class="bp-sub">every cited document</text>
+          <text x="392" y="498" class="bp-sub">and recomputes the chain</text>
+        </g>
+        <line x1="592" y1="472" x2="610" y2="472" stroke="#1e2124" marker-end="url(#chev)"/>
+        <g class="bp-gate">
+          <rect x="612.5" y="430.5" width="228" height="84" fill="#fff" stroke="#1e2124"/>
+          <text x="628" y="452" class="bp-gate-t">3  DELIVERY</text>
+          <text x="628" y="470" class="bp-sub">weakest assumptions lead</text>
+          <text x="628" y="484" class="bp-sub">the page, each with the</text>
+          <text x="628" y="498" class="bp-sub">evidence that resolves it</text>
+        </g>
+      </g>
+
+      <!-- connector controls -> outputs -->
+      <path id="l-o" class="bp-flow" d="M841,472 L904,472 L904,444"/>
+
+      <!-- ===== OUTPUTS ===== -->
+      <g class="bp-group" data-hl="l-o">
+        <text x="884" y="48" class="bp-cap">Outputs</text>
+        <rect x="884.5" y="60.5" width="288" height="440" fill="#fff" stroke="#d9dbe0"/>
+        <line x1="904" y1="106" x2="904" y2="444" stroke="#1e2124"/>
+        <g class="bp-out">
+          <line x1="904" y1="106" x2="922" y2="106" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="84.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <path d="M938,114 L944,104 L950,110 L958,98" fill="none" stroke="#1f9d5a" stroke-width="1.5"/>
+          <text x="968" y="110">Quick forecast</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="162" x2="922" y2="162" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="140.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <rect x="938" y="154" width="18" height="16" fill="none" stroke="#1e2124"/><line x1="942" y1="159" x2="952" y2="159" stroke="#1e2124"/><line x1="942" y1="164" x2="950" y2="164" stroke="#1e2124"/>
+          <text x="968" y="166">Full forecast package</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="218" x2="922" y2="218" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="196.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <rect x="938" y="210" width="18" height="16" fill="none" stroke="#1e2124"/><line x1="938" y1="215" x2="956" y2="215" stroke="#1e2124"/><line x1="938" y1="220" x2="956" y2="220" stroke="#1e2124"/><line x1="944" y1="210" x2="944" y2="226" stroke="#1e2124"/><line x1="950" y1="210" x2="950" y2="226" stroke="#1e2124"/>
+          <text x="968" y="222">Excel model</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="274" x2="922" y2="274" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="252.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <circle cx="943" cy="274" r="3" fill="#1f9d5a"/><circle cx="952" cy="268" r="3" fill="none" stroke="#1e2124"/><circle cx="953" cy="281" r="3" fill="none" stroke="#1e2124"/>
+          <text x="968" y="278">Landscape report</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="330" x2="922" y2="330" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="308.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <rect x="938" y="326" width="5" height="12" fill="#1e2124"/><rect x="945" y="320" width="5" height="18" fill="#1f9d5a"/><rect x="952" y="330" width="5" height="8" fill="#1e2124"/>
+          <text x="968" y="334">Sum-of-parts valuation</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="386" x2="922" y2="386" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="364.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <path d="M938,394 L946,380 L958,386" fill="none" stroke="#1e2124" stroke-width="1.2"/><line x1="938" y1="394" x2="958" y2="394" stroke="#1e2124"/>
+          <text x="968" y="390">Deal returns</text>
+        </g>
+        <g class="bp-out">
+          <line x1="904" y1="442" x2="922" y2="442" stroke="#1e2124" marker-end="url(#chev)"/>
+          <rect x="924.5" y="420.5" width="232" height="44" fill="#fff" stroke="#1e2124"/>
+          <rect x="938" y="434" width="18" height="16" fill="none" stroke="#1e2124"/><path d="M941,446 L946,440 L950,444 L954,437" fill="none" stroke="#1f9d5a" stroke-width="1.3"/>
+          <text x="968" y="446">Company read</text>
+        </g>
+      </g>
+
+      <!-- foot note -->
+      <text x="60" y="540" class="bp-sub">Five evidence agents work in parallel and return facts with their sources. Judgment, pricing and the investment call stay with the investor.</text>
+    </svg>
+    </div>
+    <p class="bp-hint" aria-hidden="true">Swipe sideways to explore the diagram →</p>
+    <figcaption id="bp-caption" class="bp-caption">
+      <strong>How it is wired.</strong> Evidence from three source families flows into one method; the result passes three controls before it leaves as one of seven deliverables.
+    </figcaption>
+  </figure>
+
+  <div class="stat-row" aria-label="At a glance">
+    <div class="stat"><span class="stat-n" data-count="1">1</span><span class="stat-l">path, walked end to end on every run</span></div>
+    <div class="stat"><span class="stat-n" data-count="7">7</span><span class="stat-l">deliverables, one per question type</span></div>
+    <div class="stat"><span class="stat-n" data-count="4">4</span><span class="stat-l">evidence tiers on every input</span></div>
+    <div class="stat"><span class="stat-n" data-count="3">3</span><span class="stat-l">controls before anything ships</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── COMMITMENTS ───────────────────────── -->
+<section class="band wrap" id="commitments">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">What it stands on</p>
+      <h2>Traceable.<br>Graded.<br>Reviewed.</h2>
+    </div>
+    <div class="split-body">
+      <div class="rows">
+        <div class="row">
+          <h3>Traceable</h3>
+          <p>Every number has one owner and a locator that opens: a filing, a label section, a registry record, a worksheet cell. A number without one does not pass.</p>
+        </div>
+        <div class="row">
+          <h3>Graded</h3>
+          <p>Every input declares its evidence tier and its basis. Observed, derived, judged or unknown — the reader always knows which, and why.</p>
+        </div>
+        <div class="row">
+          <h3>Reviewed</h3>
+          <p>Nothing ships before a machine check and an independent re-read of the sources. A disagreement is disclosed on the first page, not absorbed into the number.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── DELIVERABLES ───────────────────────── -->
+<section id="deliverables" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">Deliverables</p>
+      <h2>One question in.<br>One deliverable out.</h2>
+      <p class="sub">Say what you need in plain language. The system picks the output form; the analysis underneath is the same every time.</p>
+    </div>
+    <div class="split-body">
+      <div class="picker" data-component="picker">
+        <ul class="picker-list" role="tablist" aria-label="Question types">
+          <li><button role="tab" aria-selected="true" data-key="quick">“Give me a quick read on this asset’s peak sales.”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="full">“Run the full analysis.”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="excel">“Build the model.”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="landscape">“Map the competitive landscape.”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="sotp">“What is the company worth?”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="deal">“Price the royalty. What is the IRR?”</button></li>
+          <li><button role="tab" aria-selected="false" data-key="company">“Is this still a hold?”</button></li>
+        </ul>
+        <div class="picker-card" role="tabpanel">
+          <div class="picker-preview" aria-hidden="true">
+            <svg viewBox="0 0 240 150" class="pv pv-quick"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><rect x="16" y="16" width="120" height="8" fill="#1e2124"/><rect x="16" y="34" width="80" height="22" fill="#cff5dd"/><line x1="16" y1="72" x2="224" y2="72" stroke="#d9dbe0"/><rect x="16" y="84" width="200" height="5" fill="#d9dbe0"/><rect x="16" y="96" width="180" height="5" fill="#d9dbe0"/><rect x="16" y="108" width="190" height="5" fill="#d9dbe0"/><rect x="16" y="126" width="60" height="8" fill="#1f9d5a"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-full"><rect x="0.5" y="0.5" width="150" height="149" fill="#fff" stroke="#1e2124"/><rect x="12" y="12" width="90" height="7" fill="#1e2124"/><rect x="12" y="28" width="126" height="34" fill="#fff" stroke="#1f9d5a"/><line x1="12" y1="40" x2="138" y2="40" stroke="#1f9d5a"/><line x1="12" y1="51" x2="138" y2="51" stroke="#1f9d5a"/><rect x="12" y="72" width="120" height="4" fill="#d9dbe0"/><rect x="12" y="82" width="110" height="4" fill="#d9dbe0"/><rect x="12" y="92" width="118" height="4" fill="#d9dbe0"/><rect x="12" y="102" width="100" height="4" fill="#d9dbe0"/><rect x="168.5" y="24.5" width="64" height="100" fill="#fff" stroke="#1e2124"/><rect x="176" y="34" width="40" height="5" fill="#1e2124"/><rect x="176" y="48" width="48" height="4" fill="#d9dbe0"/><rect x="176" y="58" width="44" height="4" fill="#d9dbe0"/><rect x="176" y="68" width="48" height="4" fill="#d9dbe0"/><rect x="176" y="104" width="30" height="8" fill="#1f9d5a"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-excel"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><g stroke="#d9dbe0"><line x1="0" y1="30" x2="240" y2="30"/><line x1="0" y1="50" x2="240" y2="50"/><line x1="0" y1="70" x2="240" y2="70"/><line x1="0" y1="90" x2="240" y2="90"/><line x1="0" y1="110" x2="240" y2="110"/><line x1="0" y1="130" x2="240" y2="130"/><line x1="70" y1="0" x2="70" y2="150"/><line x1="112" y1="0" x2="112" y2="150"/><line x1="154" y1="0" x2="154" y2="150"/><line x1="196" y1="0" x2="196" y2="150"/></g><rect x="0" y="0" width="240" height="30" fill="#f1f2f0"/><rect x="8" y="12" width="48" height="6" fill="#1e2124"/><rect x="78" y="12" width="26" height="6" fill="#6b7280"/><rect x="120" y="12" width="26" height="6" fill="#6b7280"/><rect x="162" y="12" width="26" height="6" fill="#6b7280"/><rect x="204" y="12" width="26" height="6" fill="#6b7280"/><rect x="8" y="58" width="40" height="4" fill="#6b7280"/><rect x="8" y="78" width="46" height="4" fill="#6b7280"/><rect x="8" y="98" width="36" height="4" fill="#6b7280"/><rect x="8" y="118" width="44" height="4" fill="#6b7280"/><rect x="8" y="136" width="50" height="5" fill="#1e2124"/><rect x="80" y="136" width="24" height="5" fill="#1f9d5a"/><rect x="122" y="136" width="24" height="5" fill="#1f9d5a"/><rect x="164" y="136" width="24" height="5" fill="#1f9d5a"/><rect x="206" y="136" width="24" height="5" fill="#1f9d5a"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-landscape"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><rect x="16" y="14" width="100" height="7" fill="#1e2124"/><rect x="16" y="32" width="208" height="4" fill="#d9dbe0"/><rect x="16" y="41" width="190" height="4" fill="#d9dbe0"/><rect x="16.5" y="58.5" width="207" height="70" fill="#fff" stroke="#1e2124"/><line x1="120" y1="58" x2="120" y2="128" stroke="#d9dbe0"/><line x1="16" y1="93" x2="224" y2="93" stroke="#d9dbe0"/><circle cx="150" cy="76" r="5" fill="#1f9d5a"/><circle cx="60" cy="80" r="4" fill="none" stroke="#1e2124"/><circle cx="88" cy="110" r="4" fill="none" stroke="#1e2124"/><circle cx="180" cy="104" r="4" fill="none" stroke="#1e2124"/><circle cx="196" cy="70" r="4" fill="none" stroke="#1e2124"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-sotp"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><rect x="30" y="96" width="30" height="34" fill="#1e2124"/><rect x="68" y="78" width="30" height="52" fill="#1e2124"/><rect x="106" y="112" width="30" height="18" fill="#1e2124"/><rect x="144" y="60" width="30" height="70" fill="#4e6fae"/><rect x="182" y="40" width="30" height="90" fill="#1f9d5a"/><line x1="20" y1="130" x2="224" y2="130" stroke="#1e2124"/><rect x="30" y="18" width="70" height="6" fill="#1e2124"/><rect x="30" y="30" width="50" height="4" fill="#d9dbe0"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-deal"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><path d="M20,124 C60,124 70,70 110,56 C140,46 160,56 190,52 L220,52" fill="none" stroke="#1f9d5a" stroke-width="2"/><path d="M20,124 C70,124 90,96 130,94 C160,93 180,98 220,96" fill="none" stroke="#1e2124" stroke-width="1.5"/><line x1="20" y1="124" x2="220" y2="124" stroke="#1e2124"/><rect x="20" y="16" width="60" height="6" fill="#1e2124"/><rect x="160" y="16" width="60" height="18" fill="#cff5dd"/></svg>
+            <svg viewBox="0 0 240 150" class="pv pv-company"><rect x="0.5" y="0.5" width="239" height="149" fill="#fff" stroke="#1e2124"/><rect x="16" y="14" width="110" height="7" fill="#1e2124"/><path d="M16,110 C40,100 60,60 90,70 C120,80 140,40 170,44 C195,47 210,60 224,54" fill="none" stroke="#1e2124" stroke-width="1.5"/><line x1="16" y1="128" x2="224" y2="128" stroke="#1e2124"/><rect x="16" y="36" width="80" height="4" fill="#d9dbe0"/><rect x="16" y="45" width="60" height="4" fill="#d9dbe0"/><rect x="170" y="100" width="40" height="8" fill="#1f9d5a"/></svg>
+          </div>
+          <div class="picker-text">
+            <p class="eyebrow picker-kicker"></p>
+            <h3 class="picker-title"></h3>
+            <ul class="picker-bullets"></ul>
+          </div>
+        </div>
+      </div>
+      <p class="footnote">“Quick” shortens the output, never the analysis. Every deliverable walks the same path and passes the same controls.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── PATH ───────────────────────── -->
+<section id="path" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">A run</p>
+      <h2>One identity.<br>One path.</h2>
+      <p class="sub">Every run begins by locking the asset’s identity — its names across regulators and registries, target, sponsor, listing, and the regions and indications in scope. Open questions are asked once, in one batch, with defaults. Then the run walks the same path, end to end.</p>
+    </div>
+    <div class="split-body">
+      <div class="stepper" data-component="stepper">
+        <ol class="step-track" role="tablist" aria-label="Steps of a run">
+          <li><button role="tab" aria-selected="true" data-step="0"><span class="step-n">0</span><span class="step-name">Identify</span></button></li>
+          <li><button role="tab" aria-selected="false" data-step="1"><span class="step-n">1</span><span class="step-name">Evidence</span></button></li>
+          <li><button role="tab" aria-selected="false" data-step="2"><span class="step-n">2</span><span class="step-name">Patients</span></button></li>
+          <li><button role="tab" aria-selected="false" data-step="3"><span class="step-n">3</span><span class="step-name">Share &amp; ramp</span></button></li>
+          <li><button role="tab" aria-selected="false" data-step="4"><span class="step-n">4</span><span class="step-name">Price &amp; duration</span></button></li>
+          <li><button role="tab" aria-selected="false" data-step="5"><span class="step-n">5</span><span class="step-name">PoS</span></button></li>
+          <li class="step-exit"><button role="tab" aria-selected="false" data-step="6"><span class="step-n">→</span><span class="step-name">Validate · Review · Deliver</span></button></li>
+        </ol>
+        <div class="step-panel" role="tabpanel">
+          <p class="eyebrow step-kicker"></p>
+          <h3 class="step-q"></h3>
+          <p class="step-a"></p>
+          <p class="step-see"><span class="mono">You see</span> <span class="step-see-text"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── EQUATION ───────────────────────── -->
+<section id="equation" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">The equation</p>
+      <h2>Every forecast closes on one equation.</h2>
+      <p class="sub">Five factors, each owned by one step of the path and fed by its own family of evidence. Hover a factor to see where its evidence comes from.</p>
+    </div>
+    <div class="split-body">
+      <div class="equation" data-component="equation">
+        <div class="eq-line" aria-label="Sales equals patients times share times duration times net price times probability of success">
+          <button class="eq-term is-sales" data-term="sales">Sales</button>
+          <span class="eq-op">=</span>
+          <button class="eq-term" data-term="patients">Patients</button>
+          <span class="eq-op">×</span>
+          <button class="eq-term" data-term="share">Share</button>
+          <span class="eq-op">×</span>
+          <button class="eq-term" data-term="duration">Duration</button>
+          <span class="eq-op">×</span>
+          <button class="eq-term" data-term="price">Net price</button>
+          <span class="eq-op">×</span>
+          <button class="eq-term" data-term="pos">PoS</button>
+        </div>
+        <p class="eq-note mono">by indication × region, over time · multi-indication assets are modelled one line per indication and market, then summed — never a blended share</p>
+
+        <div class="eq-detail">
+          <div class="eq-figure" aria-hidden="true">
+            <svg viewBox="0 0 260 120" class="eqf eqf-patients"><rect x="20" y="16" width="220" height="14" fill="#1f9d5a"/><rect x="40" y="36" width="180" height="14" fill="#1f9d5a" opacity=".8"/><rect x="62" y="56" width="136" height="14" fill="#1f9d5a" opacity=".6"/><rect x="86" y="76" width="88" height="14" fill="#1f9d5a" opacity=".45"/><rect x="106" y="96" width="48" height="14" fill="#1e2124"/></svg>
+            <svg viewBox="0 0 260 120" class="eqf eqf-share"><line x1="30" y1="60" x2="230" y2="60" stroke="#d9dbe0" stroke-width="10"/><line x1="90" y1="60" x2="176" y2="60" stroke="#1f9d5a" stroke-width="10"/><line x1="90" y1="44" x2="90" y2="76" stroke="#1e2124"/><line x1="176" y1="44" x2="176" y2="76" stroke="#1e2124"/><rect x="128" y="46" width="5" height="28" fill="#1e2124"/><text x="30" y="96" class="eqf-t">low</text><text x="230" y="96" class="eqf-t" text-anchor="end">high</text></svg>
+            <svg viewBox="0 0 260 120" class="eqf eqf-duration"><rect x="30" y="50" width="200" height="20" fill="#d9dbe0"/><rect x="30" y="50" width="86" height="20" fill="#1f9d5a"/><rect x="118" y="50" width="56" height="20" fill="#1f9d5a" opacity=".55"/><line x1="30" y1="40" x2="30" y2="80" stroke="#1e2124"/><text x="30" y="96" class="eqf-t">start</text><text x="230" y="96" class="eqf-t" text-anchor="end">months on therapy</text></svg>
+            <svg viewBox="0 0 260 120" class="eqf eqf-price"><line x1="40" y1="20" x2="40" y2="100" stroke="#1e2124"/><line x1="36" y1="34" x2="44" y2="34" stroke="#1e2124"/><line x1="36" y1="58" x2="44" y2="58" stroke="#1e2124"/><line x1="36" y1="82" x2="44" y2="82" stroke="#1e2124"/><rect x="60" y="30" width="120" height="8" fill="#d9dbe0"/><rect x="60" y="54" width="150" height="8" fill="#1f9d5a"/><rect x="60" y="78" width="90" height="8" fill="#d9dbe0"/><text x="130" y="112" class="eqf-t" text-anchor="middle">benchmarks ranked by reliability</text></svg>
+            <svg viewBox="0 0 260 120" class="eqf eqf-pos"><line x1="40" y1="50" x2="220" y2="50" stroke="#1e2124"/><circle cx="40" cy="50" r="8" fill="#1e2124"/><circle cx="100" cy="50" r="8" fill="#1e2124"/><circle cx="160" cy="50" r="8" fill="#1e2124"/><circle cx="220" cy="50" r="8" fill="#1f9d5a"/><text x="40" y="82" class="eqf-t" text-anchor="middle">Ph2</text><text x="100" y="82" class="eqf-t" text-anchor="middle">Ph3</text><text x="160" y="82" class="eqf-t" text-anchor="middle">Filing</text><text x="220" y="82" class="eqf-t" text-anchor="middle">Approval</text></svg>
+            <svg viewBox="0 0 260 120" class="eqf eqf-sales"><path d="M30,100 C70,100 80,40 120,30 C150,23 170,32 200,30 L230,30" fill="none" stroke="#1f9d5a" stroke-width="2"/><path d="M30,100 C80,100 100,72 140,70 C170,69 190,73 230,72" fill="none" stroke="#4e6fae" stroke-width="2"/><line x1="30" y1="100" x2="230" y2="100" stroke="#1e2124"/><text x="30" y="116" class="eqf-t">launch</text><text x="230" y="116" class="eqf-t" text-anchor="end">plateau</text></svg>
+          </div>
+          <div class="eq-text">
+            <p class="eyebrow eq-kicker"></p>
+            <h3 class="eq-title"></h3>
+            <p class="eq-body"></p>
+            <p class="eq-src"><span class="mono">Evidence</span> <span class="eq-src-text"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="curve" data-component="curve">
+        <div class="curve-head">
+          <div>
+            <p class="eyebrow">What a forecast looks like</p>
+            <h3>A launch curve, not a point.</h3>
+            <p class="sub">The system forecasts the whole line — ramp, plateau, loss of exclusivity — and carries the probability of success on the revenue line, never in the discount rate.</p>
+          </div>
+          <ul class="legend" aria-label="Series">
+            <li><span class="sw sw-unrisked"></span>Unrisked</li>
+            <li><span class="sw sw-risked"></span>Risk-adjusted</li>
+            <li><span class="sw sw-loe"></span>Loss of exclusivity</li>
+          </ul>
+        </div>
+        <div class="curve-plot">
+          <svg viewBox="0 0 680 300" class="curve-svg" role="img" aria-label="Illustrative launch curve: unrisked and risk-adjusted sales indexed to peak equals 100, over fifteen years from launch, with loss of exclusivity in year twelve."></svg>
+          <div class="curve-tip" hidden></div>
+        </div>
+        <p class="footnote">Illustrative shape, indexed to peak = 100. Not a forecast of any real asset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── EVIDENCE ───────────────────────── -->
+<section id="evidence" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">Evidence</p>
+      <h2>Evidence arrives graded.</h2>
+      <p class="sub">Every input carries its tier and its basis. A reader can tell an observed number from a derived one, a derived one from a judgment, and a judgment from an honest unknown.</p>
+    </div>
+    <div class="split-body">
+      <div class="tiers">
+        <div class="tier">
+          <span class="tier-dot t-confirmed"></span>
+          <h3>Confirmed</h3>
+          <p>Observed in a primary document: a label section, a filing table, a registry record, a reported quarter.</p>
+        </div>
+        <div class="tier">
+          <span class="tier-dot t-derived"></span>
+          <h3>Derived</h3>
+          <p>Converted from a stated source — a comparable product, a fitted history — with the conversion written out.</p>
+        </div>
+        <div class="tier">
+          <span class="tier-dot t-judgment"></span>
+          <h3>Judgment</h3>
+          <p>An analyst call, bounded and disclosed, with the reason it was made.</p>
+        </div>
+        <div class="tier">
+          <span class="tier-dot t-unknown"></span>
+          <h3>Unknown</h3>
+          <p>Not found — and the record says where it was searched, so the next reader does not search twice.</p>
+        </div>
+      </div>
+
+      <div class="tagstrip" aria-label="Example of a tagged number">
+        <p class="eyebrow">Every headline number is tagged four ways</p>
+        <div class="tag">
+          <span class="tag-part"><span class="mono">quantity</span>Addressable patients</span>
+          <span class="tag-part"><span class="mono">scope</span>US · second line</span>
+          <span class="tag-part"><span class="mono">tier</span><span class="pill t-confirmed">Confirmed</span></span>
+          <span class="tag-part"><span class="mono">basis</span>registry series, multi-year</span>
+        </div>
+        <p class="footnote">Sell-side models are read for comparison, never copied as inputs. Where a number rests on weaker ground, that fact leads the deliverable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── CONTROLS ───────────────────────── -->
+<section id="controls" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">Controls</p>
+      <h2>Three controls before anything ships.</h2>
+      <p class="sub">Weak evidence is never hidden and never blocks a run. It is disclosed, ranked, and put first.</p>
+    </div>
+    <div class="split-body">
+      <div class="gates" data-component="gates">
+        <div class="gate">
+          <p class="mono gate-n">01</p>
+          <h3>Machine check</h3>
+          <p>The run is refused if an assumption is silent, the arithmetic does not reconcile, a cited source cannot be opened, or the asset’s identity is unverified. Everything else passes — with its weakness on the record.</p>
+          <p class="gate-out mono">refuses · exposes</p>
+        </div>
+        <div class="gate">
+          <p class="mono gate-n">02</p>
+          <h3>Independent review</h3>
+          <p>A second reviewer with no access to the analyst’s reasoning re-opens every cited document and recomputes the chain. A disagreement is flagged on the first page, not absorbed into the number.</p>
+          <p class="gate-out mono">re-opens · recomputes</p>
+        </div>
+        <div class="gate">
+          <p class="mono gate-n">03</p>
+          <h3>Delivery</h3>
+          <p>The weakest assumptions lead the deliverable, each paired with the evidence that would replace it. Then the conclusion, with every number tagged.</p>
+          <p class="gate-out mono">weakest first · then the call</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── FOUNDATION ───────────────────────── -->
+<section id="foundation" class="band wrap">
+  <div class="split">
+    <div class="split-head">
+      <p class="eyebrow">Foundation</p>
+      <h2>Built on a base that compounds.</h2>
+      <p class="sub">Three source families, five evidence agents working in parallel, and a library that grows with every run.</p>
+    </div>
+    <div class="split-body">
+      <div class="cols3">
+        <div class="col">
+          <h3>Primary documents</h3>
+          <ul class="plain">
+            <li>Regulator labels and review documents</li>
+            <li>Trial registries and published results</li>
+            <li>Company filings, announcements and earnings</li>
+            <li>Treatment guidelines and society consensus</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Industry databases</h3>
+          <ul class="plain">
+            <li>Pipeline and approval status by market</li>
+            <li>Pricing and reimbursement records</li>
+            <li>Epidemiology, patents and deal terms</li>
+            <li>Queried narrowly, per entity, with the record kept</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Proprietary library</h3>
+          <ul class="plain">
+            <li>Indexed drug models, located in one lookup</li>
+            <li>Quantified anchors by indication</li>
+            <li>Historical launches that calibrate every ramp</li>
+            <li>Sell-side models kept as comparison only</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bignums" data-component="bignums">
+        <div class="bignum"><span class="bn" data-count="800" data-prefix="~">~800</span><span class="bl">drugs indexed across local models</span></div>
+        <div class="bignum"><span class="bn" data-count="175">175</span><span class="bl">model files searchable in one lookup</span></div>
+        <div class="bignum"><span class="bn" data-count="100" data-suffix="+">100+</span><span class="bl">indications with quantified anchors</span></div>
+        <div class="bignum"><span class="bn" data-count="1800" data-prefix="~">~1,800</span><span class="bl">historical launches calibrating the ramp</span></div>
+      </div>
+
+      <div class="agents">
+        <p class="eyebrow">How the evidence is gathered</p>
+        <p>Once the asset’s identity is locked, five evidence agents set out in parallel — clinical evidence, competitive pipeline, price and sales, development stage, epidemiology — and return facts with their sources. They never return a judgment. Positioning, share, price and the investment call stay with the investor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="dm-footer wrap">
+  <p>Figures on this page are illustrative. Nothing here is investment advice or an offer of any kind.</p>
+  <p>© 2026 Diwen Tang</p>
+</footer>
+
+<script src="drug-model.js" defer></script>
+</body>
+</html>

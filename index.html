@@ -6,7 +6,8 @@
 <title>Diwen Tang</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     <div class="site-title"><a href="index.html">Diwen Tang</a></div>
     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
     <ul class="nav-links">
-      <li><a href="index.html">Bio</a></li>
+      <li><a href="index.html" aria-current="page">Bio</a></li>
       <li><a href="projects.html">Projects</a></li>
     </ul>
   </div>
@@ -24,16 +25,21 @@
 
 <div class="page">
 <main class="container">
-  <div class="bio-content">
+  <div class="bio-grid">
     <div class="bio-text">
-      <p>Healthcare investor trained in clinical medicine and economics of health care policy. Current work focuses on the life science sector, with particular interest in how drug innovation translates into clinical and commercial value across global markets.</p>
-
-      <p>Diwen received his B.S. from Fudan University Shanghai Medical College and M.S. in Health Policy from Harvard where he studied as Fung Scholar with focus on competitive interactions among and between payers, healthcare services providers, and pharmaceutical manufacturers.</p>
+      <p class="lede">Healthcare investor trained in clinical medicine and economics of health care policy. Current work focuses on the life science sector, with particular interest in how drug innovation translates into clinical and commercial value across global markets.</p>
     </div>
 
-    <div class="bio-text" style="margin-top: 16px;">
+    <div class="bio-text">
+      <p>Diwen received his B.S. from Fudan University Shanghai Medical College and M.S. in Health Policy from Harvard where he studied as Fung Scholar with focus on competitive interactions among and between payers, healthcare services providers, and pharmaceutical manufacturers.</p>
+
       <p>Open to discussions on healthcare investment, biopharma innovation, and health economics research.</p>
-      <p style="color: #666;"><a href="https://scholar.google.com" target="_blank" style="color: #666;">google scholar</a> · <a href="https://www.linkedin.com/in/steventang26/" target="_blank" style="color: #666;">linkedin</a> · <a href="https://github.com/soback26" target="_blank" style="color: #666;">github</a></p>
+
+      <div class="arrow-links bio-links">
+        <a href="https://scholar.google.com" target="_blank" rel="noopener">google scholar <span>→</span></a>
+        <a href="https://www.linkedin.com/in/steventang26/" target="_blank" rel="noopener">linkedin <span>→</span></a>
+        <a href="https://github.com/soback26" target="_blank" rel="noopener">github <span>→</span></a>
+      </div>
     </div>
   </div>
 </main>

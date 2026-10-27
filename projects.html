@@ -6,7 +6,8 @@
 <title>Projects — Diwen Tang</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Bio</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
     </ul>
   </div>
 </header>
@@ -25,20 +26,32 @@
 <div class="page">
 <main class="container">
 
-  <div class="research-section">
-    <p class="section-heading">Proprietary Stack</p>
-
-    <div class="project-item">
-      <h3>lifesci-methodology</h3>
-      <p class="project-desc">A methodology library for private equity investing in life sciences, linking clinical evidence, commercial analysis, and investment decisions.</p>
-      <p class="project-details">Supports deal screening, commercial due diligence, revenue modeling, and valuation, with clear sources, explicit assumptions, and structured investment review.</p>
-      <ul class="project-tools">
-        <li><strong>/drug-model</strong> — An investment research tool I built to assess drug sales potential through patient populations, market share, pricing, and development risk.</li>
-        <li><strong>/clinical-landscape</strong> — An investment research tool I built to evaluate the R&amp;D competitive landscape, clinical differentiation, and commercial positioning of drug assets.</li>
-      </ul>
+  <section class="stack">
+    <div class="stack-head">
+      <p class="eyebrow">Projects</p>
+      <h1 class="section-heading">Proprietary stack.</h1>
+      <p class="stack-sub">Research tools built for one purpose: making the number an investment rests on traceable, graded and reviewed before it is relied on.</p>
     </div>
-  </div>
 
+    <div class="stack-body">
+      <article class="stack-item">
+        <p class="eyebrow">Methodology</p>
+        <h2>lifesci-methodology</h2>
+        <p class="stack-desc">A research methodology for private equity investing in life sciences. It links clinical evidence, commercial analysis and the investment decision in one chain — deal screening, commercial due diligence, revenue modelling and valuation — with every number sourced, every assumption explicit, and a structured review before anything is relied on.</p>
+      </article>
+
+      <p class="eyebrow stack-tools-label">Tools</p>
+      <div class="tool-rows">
+        <a class="tool-row" href="drug-model.html">
+          <div class="tool-name"><span class="mono">01</span><h3>/drug-model</h3></div>
+          <div class="tool-text">
+            <p>An AI research system for drug and biotech investing. Name a drug or a company, ask the question; it returns an evidence-graded forecast, valuation or competitive landscape, with every number traceable to a primary document.</p>
+            <span class="tool-cta">Read how it works <span>→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
 </main>
 </div>
